@@ -21,7 +21,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 - Você instalou a versão mais recente de `Python / Requests, yt-dlp`
-- Você tem uma máquina `<Linux>`. Indique qual sistema operacional é compatível / não compatível.
+- Você tem uma máquina `Linux`. Indique qual sistema operacional é compatível / não compatível.
 
 ## 🚀 Instalando TubeDowloader manualmente 
 
@@ -36,7 +36,7 @@ Deve dar um git clone no respositoria em questao e colocar fazer o comando "chmo
 Para usar TubeDowloader, siga estas etapas:
 
 ```
-<tubedowloader.py "url-Video-youtube">
+tubedowloader.py "url-Video-youtube"
 ```
 
 Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Forneça uma referência de opções para pontos de bônus!
