@@ -11,7 +11,7 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
 - [x] Dowload de mp3,qualidade 320Kps, e tambem a thumbnail e o nome do artista
-- [ ] Ser capaz de escolher a qualidade que quira
+- [ ] Ser capaz de escolher a qualidade que quer como mp4 e mp3
 - [ ] Ser capaz de rodar em Windows e Mac, dowloader automatico
 - [ ] Tarefa 4
 - [ ] Tarefa 5
