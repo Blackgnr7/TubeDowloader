@@ -1,6 +1,6 @@
 # tubedowloader
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge(https://github.com/Blackgnr7/tubedowloader))
 ![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
@@ -24,22 +24,20 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-- Você instalou a versão mais recente de `<Python / Requests, yt-dlp>`
+- Você instalou a versão mais recente de `Python / Requests, yt-dlp`
 - Você tem uma máquina `<Linux>`. Indique qual sistema operacional é compatível / não compatível.
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Instalando tubedowloader manualmente 
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+Para instalar o tubedowloader, siga estas etapas:
 
 Linux
 
-```
 Deve dar um git clone no respositoria em questao e colocar fazer o comando "chmod +x tubedowloader.py" e depois colocar seu seu ~/.bashrc o comando "export PATH="[o diretorio do arquivo em questao]:$PATH"
-```
 
-## ☕ Usando <nome_do_projeto>
+## ☕ Usando tubedowloader
 
-Para usar <nome_do_projeto>, siga estas etapas:
+Para usar tubedowloader, siga estas etapas:
 
 ```
 <tubedowloader.py "url-Video-youtube">
