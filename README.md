@@ -1,14 +1,10 @@
-# tubedowloader
+# TubeDowloader
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Blackgnr7/tubedowloader?style=flat-square")
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
-
-<img src="imagem.png" alt="Exemplo imagem">
-
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+![GitHub language count](https://img.shields.io/github/languages/count/Blackgnr7/tubedowloader?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Blackgnr7/tubedowloader?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Blackgnr7/tubedowloader?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iBlackgnr7/tubedowloader?style=for-the-badge)
 
 ### Ajustes e melhorias
 
@@ -27,17 +23,17 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Você instalou a versão mais recente de `Python / Requests, yt-dlp`
 - Você tem uma máquina `<Linux>`. Indique qual sistema operacional é compatível / não compatível.
 
-## 🚀 Instalando tubedowloader manualmente 
+## 🚀 Instalando TubeDowloader manualmente 
 
-Para instalar o tubedowloader, siga estas etapas:
+Para instalar o TubeDowloader, siga estas etapas:
 
 Linux
 
 Deve dar um git clone no respositoria em questao e colocar fazer o comando "chmod +x tubedowloader.py" e depois colocar seu seu ~/.bashrc o comando "export PATH="[o diretorio do arquivo em questao]:$PATH"
 
-## ☕ Usando tubedowloader
+## ☕ Usando TubeDowloader
 
-Para usar tubedowloader, siga estas etapas:
+Para usar TubeDowloader, siga estas etapas:
 
 ```
 <tubedowloader.py "url-Video-youtube">
