@@ -36,7 +36,7 @@ Linux:
 Para usar TubeDowloader, siga estas etapas:
 
 ```
-tubedowloader.py "url-Video-youtube"
+tubedowloader url-Video-youtube
 ```
 
 Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Forneça uma referência de opções para pontos de bônus!
