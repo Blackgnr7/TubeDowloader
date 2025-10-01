@@ -11,7 +11,7 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
 - [x] Dowload de mp3,qualidade 320Kps, e tambem a thumbnail e o nome do artista
-- [ ] Ser capaz de escolher a qualidade que quer como mp4 e mp3
+- [x] Ser capaz de escolher se quer em mp4 ou em mp3
 - [ ] dowloader automatico em qualquer sistema operacional
 
 ## 💻 Pré-requisitos
