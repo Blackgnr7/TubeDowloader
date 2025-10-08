@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3  
 
 import yt_dlp
 import os
@@ -7,6 +7,8 @@ import requests
 import os
 import sys
 import shutil
+import subprocess
+import pathlib
 import mutagen.mp4
 
 def main():
@@ -40,16 +42,17 @@ def main():
                 res = requests.get(thumbnail, stream=True)
                 with open(f"{diretorio_destino}/capa.jpg", 'wb') as out_file:
                     shutil.copyfileobj(res.raw, out_file)
-                titulo_novo = info_dict.get('title')
-                titulo = titulo_novo.replace("/", "|")
+                titulo = info_dict.get('title')
+                titulo_novo = titulo.replace("/", ";").replace("|", "!").replace("?", "&").replace("*", "#").replace("<", "{").replace(">", "}").replace(":", ";").replace("\\", ";")
                 caminho_arquivo = f"{diretorio_destino}/oi.mp3"
                 with open(f"{diretorio_destino}/capa.jpg", 'rb') as img_file:
                     img_data = img_file.read()
                 music = eyed3.load(caminho_arquivo)
-                music.tag.images.set(3, img_data, "image/jpeg", u"cover")
+                music.tag.images.set(3, img_data, "image/jpeg")
                 music.tag.artist = artista
-                music.tag.save()
-                os.rename(f"{diretorio_destino}/oi.mp3", f"{diretorio_destino}/{titulo}.mp3")
+                music.tag.save()    
+                print("musica salva tanto como imagem e titulo")
+                os.rename(f"{diretorio_destino}/oi.mp3", f"{diretorio_destino}/{titulo_novo}.mp3")
                 os.remove(f"{diretorio_destino}/capa.jpg")
         elif ttipo == "mp4":
             ydl_opts = {
@@ -62,6 +65,7 @@ def main():
                 info_dict = ydl.extract_info(url, download=True)
                 artista = info_dict.get('uploader')
                 titulo = info_dict.get('title')
+                titulo_novo = titulo.replace("/", ";").replace("|", ";").replace("?", ";").replace("*", ";").replace("<", ";").replace(">", ";").replace(":", ";").replace("\\", ";")
                 caminho_arquivo = f"{diretorio_destino}/oi.mp4"
                 thumbnail = info_dict.get('thumbnail')
                 res = requests.get(thumbnail, stream=True)
@@ -73,13 +77,16 @@ def main():
                 video["\xa9ART"] = artista
                 video["covr"] = [mutagen.mp4.MP4Cover(img_data, imageformat=mutagen.mp4.MP4Cover.FORMAT_JPEG)]
                 video.save()
+                os.rename(caminho_arquivo, f"{diretorio_destino}/{titulo_novo}.mp4")
                 os.remove(f"{diretorio_destino}/capa.jpg")
-                os.rename(caminho_arquivo, f"{diretorio_destino}/{titulo}.mp4")
 
     else:
         if sys.argv[1] == "config":
-            print("estou fazendo, aguarde")
-        print("Uso: tubedowloader <url> <mp3|mp4>")
+            diretoriodoarquivo = pathlib.Path(__file__).parent.resolve()
+            print(f"abrindo o vscode na pasta: {diretoriodoarquivo}")
+            os.system(f"code {diretoriodoarquivo}")
+        else:
+            print("Uso: tubedowloader <url> <mp3|mp4>")
 
 if __name__ == "__main__":
     main()
