@@ -1,5 +1,3 @@
-#!/usr/bin/env python3  
-
 import yt_dlp
 import os
 import eyed3
