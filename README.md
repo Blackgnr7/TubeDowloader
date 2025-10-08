@@ -26,9 +26,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 Para instalar o TubeDowloader, siga estas etapas:
 
-Linux:
-
-- Deve dar um git clone no respositoria em questao e colocar fazer o comando "chmod +x tubedowloader.py" e depois colocar seu seu ~/.bashrc o comando "export PATH="[o diretorio do arquivo em questao]:$PATH"
+- Apenas da um git clone e execute em administrador o install.exe, e siga os passos
 
 ## ☕ Usando TubeDowloader
 
