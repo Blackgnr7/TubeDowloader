@@ -3,7 +3,6 @@ import os
 import requests
 import os
 import sys
-from dotenv import load_dotenv
 import shutil   
 import pathlib
 from mutagen.mp4 import MP4,MP4Cover
@@ -86,12 +85,11 @@ def main():
             print(f"abrindo o vscode na pasta: {diretoriodoarquivo}")
             os.system(f"code {diretoriodoarquivo}")
         else:
-            if "spotify" in sys.argv[1]:  
-                load_dotenv()  
+            if "spotify" in sys.argv[1]:    
                 url = str(sys.argv[1])
                 diretorio_destino = os.path.expanduser("~/Downloads")
-                client_id = os.getenv('Client_ID')
-                client_secret = os.getenv('Client_secret')
+                client_id = "you client_id"
+                client_secret = "you client_secret"
                 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
                 track_id = url.split("/")[-1].split("?")[-2]
                 track_info = sp.track(track_id)
