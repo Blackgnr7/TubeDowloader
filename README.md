@@ -36,7 +36,7 @@ Para usar TubeDowloader para abaixar videos do youtube, siga estas etapas:
 ```
 tubedowloader "<url-Video-youtube>" <mp4-or-mp3>
 ```
-Para usar TubeDowloader para abaixar musicas do spotify, siga estas etapas:
+Para usar TubeDowloader para abaixar musicas do spotify,tem que trocar as variaves client_id e client_secret para o seu, e siga estas etapas:
 
 ```
 tubedowloader "<url-musica-spotify>"
