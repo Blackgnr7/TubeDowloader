@@ -89,8 +89,8 @@ def main():
             if "spotify" in sys.argv[1]:  
                 url = str(sys.argv[1])
                 diretorio_destino = os.path.expanduser("~/Downloads")
-                client_id = "82190b6d4e6d4250a7e8d5a16a29443c"
-                client_secret = "eb3c7e469f40400b941dc05116cfc55b"
+                client_id = "{You key client_id}"
+                client_secret = "{You key client_secret}"
                 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
                 track_id = url.split("/")[-1].split("?")[-2]
                 track_info = sp.track(track_id)
