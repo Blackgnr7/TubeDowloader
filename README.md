@@ -1,6 +1,6 @@
 # TubeDowloader
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Blackgnr7/tubedowloader?style=flat-square")
+![GitHub repo size](https://img.shields.io/github/repo-size/Blackgnr7/tubedowloader?style=flat-square)
 ![GitHub language count](https://img.shields.io/github/languages/count/Blackgnr7/tubedowloader?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/Blackgnr7/tubedowloader?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Blackgnr7/tubedowloader?style=for-the-badge)
