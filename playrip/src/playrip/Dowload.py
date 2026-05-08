@@ -6,14 +6,13 @@ from pytubefix import YouTube
 from bs4 import BeautifulSoup
 import requests
 
-diretorio_destino = os.path.expanduser("~/Downloads")
-
-def Youtube(url, formato_do_audio, thumbnail):
+def Youtube(url:str, formato_do_audio:str, thumbnail:str,diretorio_destino=os.path.expanduser("~/Downloads")):
     if formato_do_audio.lower() == "mp3":
         yt = YouTube(url)
         artist = yt.author
         titulo = yt.title
         print(f"titulo do video do Youtube: {titulo}")
+        print(f"diretorio escolhido foi: {diretorio_destino}\n")
         titulo_novo1 = (
             titulo.replace("/", "")
             .replace("|", "")
@@ -41,7 +40,8 @@ def Youtube(url, formato_do_audio, thumbnail):
         yt = YouTube(url)
         artist = yt.author
         titulo = yt.title
-        print(f"titulo do video do Youtube: {titulo}\n")
+        print(f"titulo do video do Youtube: {titulo}")
+        print(f"diretorio escolhido foi: {diretorio_destino}\n")
         titulo_novo1 = (
             titulo.replace("/", "")
             .replace("|", "")
@@ -65,7 +65,7 @@ def Youtube(url, formato_do_audio, thumbnail):
         os.remove(f"{diretorio_destino}/capa.jpg")
 
 
-def Spotify(url, thumbnail):
+def Spotify(url:str, thumbnail:str, diretorio_destino=os.path.expanduser("~/Downloads")):
     headers = {"User-Agent": "Mozilla/5.0"}
     res = requests.get(url, headers=headers)
     soup = BeautifulSoup(res.text, "html.parser")
@@ -86,7 +86,8 @@ def Spotify(url, thumbnail):
     )
     if f" - Single by {artista}  Spotify" in Novo_titulo_spotify:
         Novo_titulo_spotify = Novo_titulo_spotify.replace(f" - Single by {artista}  Spotify", "")
-    print(f"titulo da musica do spotify: {titulo_spotify}\n")
+    print(f"titulo da musica do spotify: {titulo_spotify}")
+    print(f"diretorio escolhido foi: {diretorio_destino}\n")
     get.audio(artista=artista, titulo_da_musica=Novo_titulo_spotify, diretorio_destino=diretorio_destino)
     audiofile = eyed3.load(f"{diretorio_destino}/{Novo_titulo_spotify}.mp3")
     if not audiofile.tag:
