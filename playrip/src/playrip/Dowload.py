@@ -1,12 +1,14 @@
 import os
 from mutagen.mp4 import MP4, MP4Cover
-from playrip import get
+from mutagen.easyid3 import EasyID3
+from mutagen.id3 import ID3, APIC
 import eyed3
+from playrip import get
 from pytubefix import YouTube
 from bs4 import BeautifulSoup
 import requests
 
-def Youtube(url:str, formato_do_audio:str, thumbnail:str,diretorio_destino=os.path.expanduser("~/Downloads")):
+def Youtube(url:str, formato_do_audio:str="mp3", thumbnail:bool=True,diretorio_destino:str=os.path.expanduser("~/Downloads")):
     if formato_do_audio.lower() == "mp3":
         yt = YouTube(url)
         artist = yt.author
@@ -90,6 +92,9 @@ def Spotify(url:str, thumbnail:str, diretorio_destino=os.path.expanduser("~/Down
     print(f"diretorio escolhido foi: {diretorio_destino}\n")
     get.audio(artista=artista, titulo_da_musica=Novo_titulo_spotify, diretorio_destino=diretorio_destino)
     audiofile = eyed3.load(f"{diretorio_destino}/{Novo_titulo_spotify}.mp3")
+    if audiofile is None:
+        print("Arquivo inválido")
+        return
     if not audiofile.tag:
         audiofile.initTag()
     if thumbnail:

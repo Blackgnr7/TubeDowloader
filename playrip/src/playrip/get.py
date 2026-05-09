@@ -1,7 +1,5 @@
 import requests
 import shutil
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
 import re
 import os
 from pydub import AudioSegment
@@ -43,40 +41,20 @@ def audio(diretorio_destino, url=None, artista=None, titulo_da_musica=None):
     if url == None:
         results = Search(f"{titulo_da_musica}, {artista}")
         if results.videos:
+            i = 0
             while True:
-                i = 0
                 try:
-                    results.videos[i].streams.get_audio_only().download(
-                        output_path=diretorio_destino
-                    )
-                    titulo = results.videos[i].title
+                    results.videos[i].streams.get_audio_only().download(output_path=diretorio_destino, filename=f"{titulo_da_musica}.m4a")
+                    titulo = results.videos[i].title    
                 except Exception as e:
                     i += 1
                 else:
                     break
-            titulo_novo1 = (
-                titulo.replace("/", "")
-                .replace("|", "")
-                .replace("?", "")
-                .replace("*", "")
-                .replace("<", "")
-                .replace(">", "")
-                .replace(":", "")
-                .replace("\\", "")
-            )
-            os.rename(
-                f"{diretorio_destino}/{titulo_novo1}.m4a",
-                f"{diretorio_destino}/{titulo_da_musica}.m4a",
-            )
             sound = AudioSegment.from_file(
                 f"{diretorio_destino}/{titulo_da_musica}.m4a", format="m4a"
             )
             sound.export(f"{diretorio_destino}/{titulo_da_musica}.mp3", format="mp3")
             os.remove(f"{diretorio_destino}/{titulo_da_musica}.m4a")
-            try:
-                os.remove(".cache")
-            except Exception as e:
-                pass
     elif "youtu" in url:
         yt = YouTube(url)
         titulo = yt.title

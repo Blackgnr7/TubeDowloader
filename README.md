@@ -37,13 +37,13 @@ pip install playrip
 Para usar PlayRip para abaixar videos do youtube, siga estas etapas:
 
 ```
-playrip <url-Video-youtube> <mp4-or-mp3>
+playrip <url-Video-youtube> <mp4-or-mp3> <directório "defalt=Downloads">
 ```
 
 Para usar PlayRip para abaixar musicas do spotify, e siga estas etapas:
 
 ```
-playrip <url-musica-spotify>
+playrip <url-musica-spotify> <diretório "defalt=Downloads">
 ```
 
 Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Forneça uma referência de opções para pontos de bônus!
