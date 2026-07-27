@@ -13,8 +13,8 @@ def main():
             try:
                 directorio = sys.argv[3]
             except IndexError:
-                pass
-            if("~" in directorio):
+                print("ola não tem diretorio")
+            if(directorio != None and "~" in directorio):
                 Dowload.Youtube(url=url, formato_do_audio=tipo, thumbnail=True, diretorio_destino=os.path.expanduser(directorio))
             else:
                 if(os.path.isdir(directorio)):
@@ -27,7 +27,7 @@ def main():
         try:
             directorio = sys.argv[2]
         except IndexError:
-            pass
+            directorio = "~/Downloads"
         if("~" in directorio):
             directorio = os.path.expanduser(directorio)
             if(not os.path.exists(directorio)):

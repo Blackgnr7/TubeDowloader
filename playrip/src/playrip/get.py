@@ -74,7 +74,6 @@ def audio(diretorio_destino, url=None, artista=None, titulo_da_musica=None):
         sound.export(f"{diretorio_destino}/{titulo_novo1}.mp3", format="mp3")
         os.remove(f"{diretorio_destino}/{titulo_novo1}.m4a")
 
-
 def video(url, diretorio_destino):
     yt = YouTube(url)
     titulo = yt.title

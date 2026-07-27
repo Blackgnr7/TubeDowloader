@@ -90,7 +90,7 @@ def Spotify(url:str, thumbnail:str, diretorio_destino=os.path.expanduser("~/Down
         Novo_titulo_spotify = Novo_titulo_spotify.replace(f" - Single by {artista}  Spotify", "")
     print(f"titulo da musica do spotify: {titulo_spotify}")
     print(f"diretorio escolhido foi: {diretorio_destino}\n")
-    get.audio(artista=artista, titulo_da_musica=Novo_titulo_spotify, diretorio_destino=diretorio_destino)
+    get.audio(artista=artista, titulo_da_musica=Novo_titulo_spotify, diretorio_destino=diretorio_destino, url=None)
     audiofile = eyed3.load(f"{diretorio_destino}/{Novo_titulo_spotify}.mp3")
     if audiofile is None:
         print("Arquivo inválido")
